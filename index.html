@@ -15,16 +15,24 @@
   <body>
     <div class="container">
       <form class="row">
-        <div class="form-group col-sm-6">
-          <label for="exampleSelect1">Example select</label>
+        <div class="form-group col-sm-4">
+          <label for="orders">Start an order</label>
+            <select class="form-control" id="orders">
+            <option>Order 1</option>
+            <option>Order 2</option>
+            <option>Order 3</option>
+          </select>
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="sizes">Choose a size</label>
             <select class="form-control" id="sizes">
               <option value="10">Small</option>
               <option value="11">Medium</option>
               <option value="12">Large</option>
             </select>
         </div>
-        <div class="form-group col-sm-6">
-          <label for="exampleSelect1">Example select</label>
+        <div class="form-group col-sm-4">
+          <label for="toppings">Choose Toppings</label>
             <select class="form-control" id="toppings">
               <option value="1">Plain Cheese</option>
               <option value="2">Veggie</option>
@@ -33,7 +41,10 @@
             </select>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary form-control">Submit</button>
+      <button type="submit" class="btn btn-primary form-control">Add order</button>
     </form>
+    <ul id="output1">
+    </ul>
+    <button class="btn form-control">Purchase</button>
   </body>
 </html>
