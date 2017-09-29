@@ -16,21 +16,19 @@ var totalCalculator = function(pizzas) {
   });
   return total;
 }
+// Front end logic
 $(document).ready(function() {
   $("form").submit(function(event) {
   event.preventDefault();
   var pizzaOne = new Pizza($("#orders").val(), $("#sizes :selected").text(), $("#toppings :selected").text());
   var size = parseInt($("#sizes").val());
   var topping = parseInt($("#toppings").val());
-  console.log(pizzaOne);
-  console.log(size);
   pizzaOne.newPrice(size, topping);
   arrayAlpha.push(pizzaOne);
-  $("#output1").append("<li>" + pizzaOne.order + ", will come to a total of: $" + pizzaOne.price + "</li>");
-  alert("here");
-  console.log(arrayAlpha);
+  $("#output1").append("<li>" + pizzaOne.order + "- will come to a total of: $" + pizzaOne.price + "</li>");
 });
 $("#purchase").click(function() {
-$("#purchase").text("Your new total is: $" + totalCalculator(arrayAlpha));
+$("#output1").empty();
+$("#output2").text("Your new total is: $" + totalCalculator(arrayAlpha));
 });
 });
