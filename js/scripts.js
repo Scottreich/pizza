@@ -26,8 +26,11 @@ $(document).ready(function() {
   console.log(size);
   pizzaOne.newPrice(size, topping);
   arrayAlpha.push(pizzaOne);
-  $("#output1").append("<li>" + pizzaOne.order + ":$" + pizzaOne.price + "</li>");
+  $("#output1").append("<li>" + pizzaOne.order + ", will come to a total of: $" + pizzaOne.price + "</li>");
   alert("here");
-
+  console.log(arrayAlpha);
+});
+$("#purchase").click(function() {
+$("#purchase").text("Your new total is: $" + totalCalculator(arrayAlpha));
 });
 });
