@@ -13,7 +13,7 @@ var totalCalculator = function(pizzas) {
   var total = 0;
   pizzas.forEach(function(pizza1) {
     total += pizza1.price;
-  });
+});
   return total;
 }
 // Front end logic
@@ -27,8 +27,8 @@ $(document).ready(function() {
   arrayAlpha.push(pizzaOne);
   $("#output1").append("<li>" + pizzaOne.order + "- will come to a total of: $" + pizzaOne.price + "</li>");
 });
-$("#purchase").click(function() {
-$("#output1").empty();
-$("#output2").text("Your new total is: $" + totalCalculator(arrayAlpha));
+  $("#purchase").click(function() {
+  $("#output1").empty();
+  $("#output2").text("Your new total is: $" + totalCalculator(arrayAlpha));
 });
 });

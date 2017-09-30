@@ -14,3 +14,9 @@ When add order button is clicked a new object will be pushed to an arrayAlpha of
 
 When the purchase button is clicked the all logged orders (arrayAlpha) will be passed to totalCalculator that will add the value of all existing orders.
   Input: Order1- will come to a total of $11, Order2- will come to a total of $11 Output: Your new total is $22
+
+Known bugs:
+When the purchase button is clicked arrayAlpha retains its contents, until document is reloaded
+  Input: A second click of purchase Output: current orders add to list + all previous additions to array
+Form allow multiple creations of order1, order2, Order2
+  Input: order2, order2 Output: (upon purchase) order2 + order2
